@@ -45,9 +45,6 @@
       "target": "api::portfolio-category.portfolio-category",
       "mappedBy": "portfolios"
     },
-    "content": {
-      "type": "richtext"
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -55,6 +52,14 @@
     "excerpt": {
       "type": "richtext",
       "required": true
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
